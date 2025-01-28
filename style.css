@@ -8,3 +8,8 @@
     padding: 10px;
     font-size: larger;
 }
+
+.pad {
+    display:flex;
+    flex-wrap:wrap;
+}
