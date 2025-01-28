@@ -2,9 +2,6 @@ body {
     width:100vw;
     height: 100vh;
     margin: 0px;
-}
-
-.pad-container {
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -19,6 +16,9 @@ body {
 .pad {
     display:flex;
     flex-wrap:wrap;
+    margin: 0;
+    align-self:stretch;
+    max-width: inherit;
     aspect-ratio: 1 / 1;
 }
 .pad-pixel {
