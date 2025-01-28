@@ -1,3 +1,9 @@
+body {
+    width:100vw;
+    height: 100vh;
+    margin: 0px;
+}
+
 .pad-container {
     display:flex;
     flex-direction: column;
@@ -7,9 +13,15 @@
 .clear-pad {
     padding: 10px;
     font-size: larger;
+    margin-top: 10px;
 }
 
 .pad {
     display:flex;
     flex-wrap:wrap;
+    aspect-ratio: 1 / 1;
+}
+.pad-pixel {
+    border-width: 1px;
+    border-color: black;
 }
