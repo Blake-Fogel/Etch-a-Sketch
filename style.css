@@ -16,7 +16,6 @@ body {
 .pad {
     display:flex;
     flex-wrap:wrap;
-    margin: 0;
     aspect-ratio: 1 / 1;
     flex: 1 1 200px;
     max-width: 100vw;
@@ -25,4 +24,6 @@ body {
 .pad-pixel {
     border-width: 1px;
     border-color: black;
+    aspect-ratio: 1 / 1;
+    flex-grow: 1 1 50px;
 }
