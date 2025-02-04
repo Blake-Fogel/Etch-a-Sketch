@@ -18,7 +18,7 @@ function resizePad() {
     let button_margin_height = parseFloat(clear_pad_measurements.marginTop) +
     parseFloat(clear_pad_measurements.marginBottom);
     let available_height = document.body.clientHeight - 
-    (button_margin_height + parseFloat(clear_pad_measurements.height)) - 0;
+    (button_margin_height + parseFloat(clear_pad_measurements.height));
     if (available_height > document.body.clientWidth) {
         let measurement = document.body.clientWidth - 1 + 'px';
         pad.style.width = measurement;
