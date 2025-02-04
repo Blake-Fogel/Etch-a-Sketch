@@ -7,12 +7,9 @@ const padObserver = new ResizeObserver(() => {
     });
 padObserver.observe(document.body);
 clear_pad.addEventListener('click', () => {
-    let padPixel = document.createElement('div');
-    padPixel.classList.add('pad-pixel');
-    pad.appendChild(padPixel);
-    resizePixels();
+    
 });
-//populatePixels();
+populatePixels();
 function resizePad() {
     let clear_pad_measurements = window.getComputedStyle(clear_pad);
     let button_margin_height = parseFloat(clear_pad_measurements.marginTop) +
@@ -23,19 +20,18 @@ function resizePad() {
         let measurement = document.body.clientWidth - 1 + 'px';
         pad.style.width = measurement;
         pad.style.height = measurement;
-        console.log(measurement);
      } else {
         let measurement = available_height + 'px';
         pad.style.height = measurement;
         pad.style.width = measurement;
-        console.log(measurement);
     }
 }
 function resizePixels() {
     document.querySelectorAll('.pad-pixel').forEach((element) => {
-        let desiredWidth = (pad.clientWidth / pixelCount);
+        let padDimensions = window.getComputedStyle(pad);
+        let widthWithoutBorders = parseFloat(padDimensions["width"]) - parseFloat(padDimensions.borderWidth) * 2;
+        let desiredWidth = (widthWithoutBorders / pixelCount);
         element.style.width = desiredWidth + 'px';
-        console.log(desiredWidth);
     });
 }
 function populatePixels() {
