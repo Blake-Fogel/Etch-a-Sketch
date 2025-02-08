@@ -20,7 +20,7 @@ clear_pad.addEventListener('click', () => {
         populatePixels();
     }
 });
-pad.addEventListener('click', recolorPixel,{capture:true});
+pad.addEventListener('mouseenter', recolorPixel,{capture:true});
 populatePixels();
 function recolorPixel(event) {
     function getRandomColor(min,max) {
