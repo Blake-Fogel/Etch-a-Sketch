@@ -40,7 +40,6 @@ function recolorPixel(event) {
     if (match!=null) {
         let match = backGround.match(rgbaRegex);
         alpha = Number(match.groups.alpha) + 0.1;
-        console.log(alpha);
     }
     target.style.backgroundColor = `rgba(${red} ${green} ${blue} / ${alpha})`;
 }
